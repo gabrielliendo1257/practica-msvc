@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "product")
+@FeignClient(name = "msvc-product/api/v1/product")
 public interface ProductFeignClient {
 
-  @GetMapping(value = "/all") List<Product> getFullProducts();
+    @GetMapping(value = "/all")
+    List<Product> getFullProducts();
 
-  @GetMapping(value = "/{id}")
-  Product getRequestProductById(@PathVariable Integer id);
+    @GetMapping(value = "/{id}")
+    Product getRequestProductById(@PathVariable Integer id);
 
-  @GetMapping
-  Product
-  getRequestProdutByName(@RequestParam(name = "product") String product);
+    @GetMapping
+    Product getRequestProdutByName(@RequestParam(name = "product") String product);
 }

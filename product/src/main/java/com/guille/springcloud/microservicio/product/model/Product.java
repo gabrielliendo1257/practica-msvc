@@ -1,9 +1,6 @@
 package com.guille.springcloud.microservicio.product.model;
 
-import java.time.LocalDate;
-
 import com.guille.springcloud.microservicio.product.model.listener.ProductEventListener;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
@@ -12,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -41,5 +39,4 @@ public class Product {
 
     @Transient
     private Integer port;
-
 }
